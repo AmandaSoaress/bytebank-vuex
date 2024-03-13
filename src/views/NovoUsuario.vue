@@ -20,7 +20,7 @@
 </template>
 <script>
 export default {
-  data: function() {
+  data(){
     return {
       usuario: {
         nome: "",
@@ -32,10 +32,10 @@ export default {
   methods: {
     enviarFormulario() {
       this.$http
-        .post(" auth/register", this.usuario)
-        .then (resposta => {
-          console.log(resposta)
-           this.$router.push({ name: 'login' });
+        .post("auth/register", this.usuario)
+        .then((resposta) => {
+          console.log(resposta);
+          this.$router.push({ name: "login" });
         })
         .catch((erro) => console.log(erro));
     },

@@ -24,11 +24,11 @@ export default {
     };
   },
   mounted() {
-    this.$http.get("gerentes")
+    this.$http
+      .get("gerentes")
       .then((response) => (this.gerentes = response.data))
       .catch((erro) => console.log(erro));
   },
- 
 };
 </script>
 

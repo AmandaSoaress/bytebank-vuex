@@ -3,7 +3,7 @@ import VueRouter from 'vue-router'
 import Gerentes from '../views/Gerentes.vue'
 import Home from '../views/Home.vue'
 import Login from '../views/Login'
-import store from '@/store'
+import store from '../store'
 
 Vue.use(VueRouter)
 
@@ -21,7 +21,7 @@ const routes = [{
     path: '/cadastre-se',
     name: 'novo.usuario',
     component: () => import( /* webpackChunkName: "registrar" */
-    '../views/NovoUsuario.vue'),
+      '../views/NovoUsuario.vue'),
     meta: {
       publica: true
     }

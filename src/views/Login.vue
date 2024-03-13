@@ -33,7 +33,7 @@ export default {
         .dispatch("efetuarLogin", this.usuario)
         .then(() => {
           this.$router.push({ name: "gerentes" });
-          this.mensagemErro = ''
+          this.mensagemErro = "";
         })
         //localStorage.setItem('token', response.data.access_token)
         //this.$store.state.token = response.data.access_token

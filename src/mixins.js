@@ -1,8 +1,12 @@
+import router from'./router'
+import store from './store'
+
+
 export const logoutMixin = {
     methods: {
         efetuarLogout() {
-            this.$store.commit("DESLOGAR_USUARIO");
-            this.$router.push({
+            store.commit("DESLOGAR_USUARIO");
+            router.push({
                 name: "login"
             });
         },
